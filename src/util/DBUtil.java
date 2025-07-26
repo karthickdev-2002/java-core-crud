@@ -17,6 +17,5 @@ public class DBUtil {
              e.printStackTrace();
              return null;
          }
-//        return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }

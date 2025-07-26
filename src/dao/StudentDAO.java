@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -28,4 +29,33 @@ public class StudentDAO {
         conn.close();
         return list;
     }
+	
+	 public void insertUser(Student s) throws SQLException {
+	        Connection conn = DBUtil.getConnection();
+	        PreparedStatement ps = conn.prepareStatement("INSERT INTO students(name,email,age) VALUES(?,?,?)");
+	        ps.setString(1, s.getName());
+	        ps.setString(2, s.getEmail());
+	        ps.setDouble(3, s.getAge());
+	        ps.executeUpdate();
+	        conn.close();
+	    }
+
+	    public void updateUser(Student s) throws SQLException {
+	        Connection conn = DBUtil.getConnection();
+	        PreparedStatement ps = conn.prepareStatement("UPDATE students SET name=?, email=?, age=? WHERE id=?");
+	        ps.setString(1, s.getName());
+	        ps.setString(2, s.getEmail());
+	        ps.setDouble(3, s.getAge());
+	        ps.setInt(4, s.getId());
+	        ps.executeUpdate();
+	        conn.close();
+	    }
+
+	    public void deleteUser(int id) throws SQLException {
+	        Connection conn = DBUtil.getConnection();
+	        PreparedStatement ps = conn.prepareStatement("DELETE FROM students WHERE id=?");
+	        ps.setInt(1, id);
+	        ps.executeUpdate();
+	        conn.close();
+	    }
 }

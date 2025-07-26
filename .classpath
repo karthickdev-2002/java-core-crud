@@ -11,12 +11,12 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/karth/Downloads/gson-2.11.0.jar">
+	<classpathentry kind="lib" path="D:/Projects/Core java/jar files/gson-2.11.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/karth/Downloads/postgresql-42.7.6.jar">
+	<classpathentry kind="lib" path="D:/Projects/Core java/jar files/postgresql-42.7.6.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
